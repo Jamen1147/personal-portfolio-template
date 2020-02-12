@@ -1,0 +1,22 @@
+{
+  "name": "personal-portfolio-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jamen1147/personal-portfolio-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jamen1147/personal-portfolio-template/issues"
+  },
+  "homepage": "https://github.com/Jamen1147/personal-portfolio-template#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
