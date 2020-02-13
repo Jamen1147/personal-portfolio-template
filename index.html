@@ -51,7 +51,7 @@
     </header>
 
     <main>
-      <section class="section-about">
+      <section class="section-about" id="section-about">
         <div class="u-center-text u-margin-bottom-l">
           <h2 class="heading-secondary">
             About Me
@@ -103,7 +103,7 @@
         </div>
       </section>
 
-      <section class="section-features">
+      <section class="section-features" id="section-features">
         <div class="row">
           <div class="col-1-of-4">
             <div class="feature-box">
@@ -159,7 +159,7 @@
         </div>
       </section>
 
-      <section class="section-projects">
+      <section class="section-projects" id="section-projects">
         <div class="u-center-text u-margin-bottom-l">
           <h2 class="heading-secondary">
             Projects
@@ -198,7 +198,7 @@
                       orem ipsum dolor sit amet, consectetur adipisicing elit.
                     </p>
                   </div>
-                  <a href="#" class="btn btn--white">Source Code</a>
+                  <a href="#popup" class="btn btn--white">Details</a>
                 </div>
               </div>
             </div>
@@ -234,7 +234,7 @@
                       orem ipsum dolor sit amet, consectetur adipisicing elit.
                     </p>
                   </div>
-                  <a href="#" class="btn btn--white">Source Code</a>
+                  <a href="#popup" class="btn btn--white">Details</a>
                 </div>
               </div>
             </div>
@@ -270,7 +270,7 @@
                       orem ipsum dolor sit amet, consectetur adipisicing elit.
                     </p>
                   </div>
-                  <a href="#" class="btn btn--white">Source Code</a>
+                  <a href="#popup" class="btn btn--white">Details</a>
                 </div>
               </div>
             </div>
@@ -282,7 +282,7 @@
         </div>
       </section>
 
-      <section class="section-experience">
+      <section class="section-experience" id="section-experience">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="img/video.mp4" type="video/mp4"></source>
@@ -340,7 +340,7 @@
         </div>
       </section>
 
-      <section class="section-contact">
+      <section class="section-contact" id="section-contact">
         <div class="row">
           <div class="contact">
             <div class="contact__form">
@@ -426,5 +426,23 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img/nat-8.jpg" alt="Project Screenshot" class="popup__img">
+          <img src="img/nat-9.jpg" alt="Project Screenshot" class="popup__img">
+        </div>
+        <div class="popup__right">
+          <a href="#section-projects" class="popup__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-m">Project Title</h2>
+          <h3 class="heading-tertiary u-margin-bottom-s">Lorem ipsum dolor atibus ssumenda.</h3>
+          <p class="popup__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia veniam officiis voluptatum. Quae facilis eum rerum ipsam recusandae consequatur labore tempora! Soluta, quisquam voluptates error consectetur maiores ex expedita! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem unde veniam excepturi repellat. Repellendus, culpa mollitia corporis distinctio maiores veniam tenetur hic quod dolorum, provident qui commodi perferendis, quos possimus.
+          </p>
+          <a href="#" class="btn btn--primary">Source Code</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
