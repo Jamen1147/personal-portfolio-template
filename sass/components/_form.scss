@@ -59,6 +59,8 @@
     cursor: pointer;
     position: relative;
     padding-left: 4.5rem;
+    font-size: $default-font-size;
+    font-weight: 400;
   }
 
   &__radio-button {

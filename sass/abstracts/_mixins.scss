@@ -5,3 +5,10 @@
     clear: both;
   }
 }
+
+@mixin center-horizontal-vertical($top-val: 50%) {
+  position: absolute;
+  top: $top-val;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
