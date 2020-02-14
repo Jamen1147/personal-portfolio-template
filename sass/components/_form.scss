@@ -9,7 +9,7 @@
     color: inherit;
     font-size: 1.5rem;
     border-radius: 2px;
-    background-color: rgba($color: $color-white, $alpha: 0.6);
+    background-color: rgba($color: $color-white, $alpha: 0.8);
     border: none;
     border-bottom: 3px solid transparent;
     width: 90%;
@@ -61,6 +61,7 @@
     padding-left: 4.5rem;
     font-size: $default-font-size;
     font-weight: 400;
+    text-transform: uppercase;
   }
 
   &__radio-button {
