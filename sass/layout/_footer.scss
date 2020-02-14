@@ -12,6 +12,10 @@
   &__navigation {
     padding-top: 1rem;
     display: inline-block;
+    @include responsive(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -49,5 +53,12 @@
     padding-top: 1rem;
     width: 80%;
     float: right;
+
+    @include responsive(tab-port) {
+      border-top: 1px solid $color-grey-dark;
+      padding-top: 5rem;
+      width: 100%;
+      float: none;
+    }
   }
 }

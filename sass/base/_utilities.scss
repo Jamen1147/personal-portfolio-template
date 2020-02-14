@@ -4,24 +4,47 @@
 
 .u-margin-bottom-s {
   margin-bottom: 1.5rem !important;
+
+  @include responsive(tab-port) {
+    margin-bottom: 1rem !important;
+  }
 }
 
 .u-margin-bottom-m {
   margin-bottom: 4rem !important;
+
+  @include responsive(tab-port) {
+    margin-bottom: 3rem !important;
+  }
 }
 
 .u-margin-bottom-l {
   margin-bottom: 8rem !important;
+
+  @include responsive(tab-port) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .u-margin-top-l {
   margin-top: 8rem !important;
+
+  @include responsive(tab-port) {
+    margin-top: 5rem !important;
+  }
 }
 
 .u-margin-top-m {
   margin-top: 4rem !important;
+
+  @include responsive(tab-port) {
+    margin-top: 3rem !important;
+  }
 }
 
 .u-margin-top-s {
   margin-top: 1.5rem !important;
+  @include responsive(tab-port) {
+    margin-top: 1rem !important;
+  }
 }
