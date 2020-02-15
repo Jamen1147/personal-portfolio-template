@@ -42,9 +42,25 @@ body {
     body {
       padding: 0; } }
 
+::-moz-selection {
+  background-color: #8b9c83;
+  color: #fff; }
+
 ::selection {
   background-color: #8b9c83;
   color: #fff; }
+
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  70% {
+    transform: translateX(3rem); }
+  90% {
+    transform: translateX(-1.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
 @keyframes moveInLeft {
   0% {
@@ -54,6 +70,18 @@ body {
     transform: translateX(3rem); }
   90% {
     transform: translateX(-1.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  70% {
+    transform: translateX(-3rem); }
+  90% {
+    transform: translateX(1.5rem); }
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -69,6 +97,18 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0); } }
+
+@-webkit-keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  70% {
+    transform: translateY(-1rem); }
+  90% {
+    transform: translateY(0.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 @keyframes moveInBottom {
   0% {
@@ -92,14 +132,18 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
   .heading-primary--main {
     display: block;
     font-size: 4.5rem;
     font-weight: 400;
     letter-spacing: 2rem;
+    -webkit-animation-name: moveInLeft;
     animation-name: moveInLeft;
+    -webkit-animation-duration: 1.3s;
     animation-duration: 1.3s;
+    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out; }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
@@ -110,8 +154,11 @@ body {
     font-size: 2rem;
     font-weight: 400;
     letter-spacing: 1rem;
+    -webkit-animation-name: moveInRight;
     animation-name: moveInRight;
+    -webkit-animation-duration: 1.3s;
     animation-duration: 1.3s;
+    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
     margin-bottom: 6rem; }
     @media only screen and (max-width: 37.5em) {
@@ -324,7 +371,9 @@ body {
   transition: all 0.4s; }
 
 .btn--animated {
+  -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
   animation: moveInBottom 0.5s ease-out 0.75s;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards; }
 
 .btn-text:link, .btn-text:visited {
@@ -574,11 +623,10 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 50%; }
-    @supports (clip-path: polygon(0 0)) {
+    @supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) {
       .story__shape {
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
-        -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         border-radius: none; } }
     @media only screen and (max-width: 37.5em) {
@@ -605,12 +653,14 @@ body {
     text-align: center;
     opacity: 0;
     transition: all 0.5s;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden; }
   .story:hover .story__caption {
     opacity: 1;
     transform: translate(-50%, -50%); }
   .story:hover .story__img {
     transform: scale(1);
+    -webkit-filter: blur(3px) brightness(60%);
     filter: blur(3px) brightness(60%); }
 
 .bg-video {
@@ -625,6 +675,7 @@ body {
   .bg-video__content {
     height: 100%;
     width: 100%;
+    -o-object-fit: cover;
     object-fit: cover; }
 
 .popup {
@@ -638,7 +689,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s; }
-  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+  @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
     .popup {
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
@@ -713,17 +764,25 @@ body {
     -moz-column-count: 2;
     -moz-column-gap: 4rem;
     -moz-column-rule: 1px solid #eee;
+    -webkit-column-count: 2;
     column-count: 2;
+    -webkit-column-gap: 4rem;
     column-gap: 4rem;
+    -webkit-column-rule: 1px solid #eee;
     column-rule: 1px solid #eee;
-    -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
     @media only screen and (max-width: 37.5em) {
       .popup__text {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
         column-count: 1;
+        -webkit-column-gap: 0;
+        -moz-column-gap: 0;
         column-gap: 0;
+        -webkit-column-rule: none;
+        -moz-column-rule: none;
         column-rule: none; } }
   .popup:target {
     opacity: 1;
@@ -780,7 +839,7 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 20vh, 100% 100%, 0 80vh);
   clip-path: polygon(0 0, 100% 20vh, 100% 100%, 0 80vh);
   height: 95vh; }
-  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(139, 156, 131, 0.8), rgba(73, 87, 85, 0.8)), url(../img/hero-1.jpg); } }
   @media only screen and (max-width: 37.5em) {
@@ -980,7 +1039,7 @@ body {
   background-size: cover;
   margin-top: -9rem;
   transform: skewY(-7deg); }
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
     .section-features {
       background-image: linear-gradient(to right bottom, rgba(139, 156, 131, 0.8), rgba(73, 87, 85, 0.8)), url(../img/feature-1.jpg); } }
   .section-features > * {
