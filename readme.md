@@ -6,6 +6,8 @@ A modern looking personal website templates that's easy to use, extend and modif
 
 Go to the [demo](https://jamen1147.github.io/personal-portfolio-template/) page
 
+![](img/project-1.jpg?raw=true)
+
 ## Commands
 
 Here's the command you can use to start, and build the project.
