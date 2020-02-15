@@ -183,7 +183,7 @@
     font-weight: 300;
   }
 
-  @include responsive(tab-port) {
+  @include responsive(tab-port-none-touch) {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
