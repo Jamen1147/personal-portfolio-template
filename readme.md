@@ -4,7 +4,7 @@ A modern looking personal website templates that's easy to use, extend and modif
 
 ## Demo
 
-Go to the [demo](https://jamen1147.github.io/personal-portfolio-template/) page
+Go to the <a href="https://jamen1147.github.io/personal-portfolio-template/" target="_blank">Demo</a> page
 
 ![](img/project-1.jpg?raw=true)
 
